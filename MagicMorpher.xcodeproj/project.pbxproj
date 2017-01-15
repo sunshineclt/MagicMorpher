@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E930983A1E2BD708004EE446 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E93098391E2BD708004EE446 /* main.cpp */; };
+		E930984A1E2BDC47004EE446 /* FaceLandmarkGetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E93098481E2BDC47004EE446 /* FaceLandmarkGetter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		E93098361E2BD708004EE446 /* MagicMorpher */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MagicMorpher; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93098391E2BD708004EE446 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E93098481E2BDC47004EE446 /* FaceLandmarkGetter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceLandmarkGetter.cpp; sourceTree = "<group>"; };
+		E93098491E2BDC47004EE446 /* FaceLandmarkGetter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FaceLandmarkGetter.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				E93098391E2BD708004EE446 /* main.cpp */,
+				E93098481E2BDC47004EE446 /* FaceLandmarkGetter.cpp */,
+				E93098491E2BDC47004EE446 /* FaceLandmarkGetter.hpp */,
 			);
 			path = MagicMorpher;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E930983A1E2BD708004EE446 /* main.cpp in Sources */,
+				E930984A1E2BDC47004EE446 /* FaceLandmarkGetter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
