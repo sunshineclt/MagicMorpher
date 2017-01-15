@@ -217,16 +217,116 @@
 		E930983E1E2BD708004EE446 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				DEVELOPMENT_TEAM = E9FBJ6HPDB;
+				FRAMEWORK_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv3/3.2.0/lib,
+					/Library/Frameworks,
+					/usr/local/Cellar/jpeg/8d/lib,
+				);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv3/3.2.0/include,
+					"/Users/cjjlt/programming/C++/dlib/dlib/..",
+					/usr/local/Cellar/jpeg/8d/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv3/3.2.0/lib,
+					/usr/local/Cellar/jpeg/8d/lib,
+				);
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DDLIB_JPEG_SUPPORT",
+				);
+				OTHER_LDFLAGS = (
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_photo",
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_video",
+					"-lopencv_videoio",
+					"-lopencv_videostab",
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/cjjlt/programming/C++/dlib/examples/build/dlib_build/Debug/libdlib.a",
+					/usr/X11R6/lib/libSM.dylib,
+					/usr/X11R6/lib/libICE.dylib,
+					/usr/X11R6/lib/libX11.dylib,
+					/usr/X11R6/lib/libXext.dylib,
+					/usr/local/lib/libpng.dylib,
+					/usr/lib/libcblas.dylib,
+					/usr/lib/liblapack.dylib,
+					/usr/lib/libsqlite3.dylib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
 		E930983F1E2BD708004EE446 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				DEVELOPMENT_TEAM = E9FBJ6HPDB;
+				FRAMEWORK_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv3/3.2.0/lib,
+					/Library/Frameworks,
+					/usr/local/Cellar/jpeg/8d/lib,
+				);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv3/3.2.0/include,
+					"/Users/cjjlt/programming/C++/dlib/dlib/..",
+					/usr/local/Cellar/jpeg/8d/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv3/3.2.0/lib,
+					/usr/local/Cellar/jpeg/8d/lib,
+				);
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DDLIB_JPEG_SUPPORT",
+				);
+				OTHER_LDFLAGS = (
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_photo",
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_video",
+					"-lopencv_videoio",
+					"-lopencv_videostab",
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/cjjlt/programming/C++/dlib/examples/build/dlib_build/Debug/libdlib.a",
+					/usr/X11R6/lib/libSM.dylib,
+					/usr/X11R6/lib/libICE.dylib,
+					/usr/X11R6/lib/libX11.dylib,
+					/usr/X11R6/lib/libXext.dylib,
+					/usr/local/lib/libpng.dylib,
+					/usr/lib/libcblas.dylib,
+					/usr/lib/liblapack.dylib,
+					/usr/lib/libsqlite3.dylib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
