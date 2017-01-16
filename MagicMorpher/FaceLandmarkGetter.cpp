@@ -12,23 +12,27 @@ using namespace std;
 using namespace dlib;
 using namespace cv;
 
-FaceLandmarkGetter::FaceLandmarkGetter() {
-};
+/// no parameter constructor
+FaceLandmarkGetter::FaceLandmarkGetter() {};
 
+/// constructor
 FaceLandmarkGetter::FaceLandmarkGetter(string predictor_path, string picture_path) {
     this->predictor_path = predictor_path;
     this->picture_path = picture_path;
 }
 
-
-std::vector<cv::Point2f> FaceLandmarkGetter::getFaceLandMark() {
-    // Set up frontal face detector & shape predictor(using the trained data from Internet)
+/**
+ get face landmarks
+ 
+ @param isDemoMode if isDemoMode then it will demostrate the landmarks found
+ @return a vector contains Point2f, which is the pixel coordinate
+ */
+std::vector<cv::Point2f> FaceLandmarkGetter::getFaceLandMark(bool isDemoMode) {
+    // Set up frontal face detector & shape predictor
     frontal_face_detector detector = get_frontal_face_detector();
     shape_predictor sp;
     cout << "loading predictor data..." << endl;
     deserialize(predictor_path) >> sp;
-    
-//    image_window window;
     
     array2d<rgb_pixel> img;
     cout << "loading image..." << endl;
@@ -46,7 +50,7 @@ std::vector<cv::Point2f> FaceLandmarkGetter::getFaceLandMark() {
     std::vector<full_object_detection> shapes;
     full_object_detection shape = sp(img, det);
     std::vector<Point2f> points;
-    cout << "number of parts: "<< shape.num_parts() << endl;
+    cout << "number of landmarks: "<< shape.num_parts() << endl;
     for (unsigned int i = 0; i < shape.num_parts(); ++i) {
         dlib::point p = shape.part(i);
         points.push_back(Point2f(p.x(), p.y()));
@@ -54,16 +58,16 @@ std::vector<cv::Point2f> FaceLandmarkGetter::getFaceLandMark() {
     }
     shapes.push_back(shape);
     
-    // View face landmarks
-//    window.clear_overlay();
-//    window.set_image(img);
-//    window.add_overlay(render_face_detections(shapes));
-    
-//    dlib::array<array2d<rgb_pixel> > face_chips;
-//    extract_image_chips(img, get_face_chip_details(shapes), face_chips);
-//    win_faces.set_image(tile_images(face_chips));
-    
-//    cin.get();
+    if (isDemoMode) {
+        // View face landmarks
+        image_window window;
+        window.clear_overlay();
+        window.set_image(img);
+        window.add_overlay(render_face_detections(shapes));
+        cout << "Press enter in console to continue..." << endl;
+        cin.get();
+        window.close_window();
+    }
     
     return points;
 };
