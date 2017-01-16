@@ -10,17 +10,17 @@ A tool for face morphing
 <img src="./pic/trump.jpg" alt="特朗普" width=200px/>
 
 ### 特征检测
-![特征检测](./pic/特征检测.png)
+<img src="./pic/特征检测.jpg" alt="特征检测" width=400px/>
 
 ### 三角剖分
-![三角剖分](./pic/三角剖分.png)
+<img src="./pic/三角剖分.jpg" alt="三角剖分" width=400px/>
 
 ### Morph结果
 morph结果：
-![morph结果](./pic/morphed_face.png)
+<img src="./pic/morphed_face.png" alt="morph结果" width=400px/>
 
 没有boundary的morph效果（usage中会解释）：
-![没有boundary的morph效果](./pic/no_boundary_morphed_face.png)
+<img src="./pic/no_boundary_morphed_face.png" alt="没有boundary的morph效果" width=400px/>
 
 ## Usage
 `./MagicMorpher /path/shape_predictor_68_face_landmarks.dat /path/1.jpg /path/2.jpg /path/target.jpg 0.5 1 0`
