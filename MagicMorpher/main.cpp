@@ -68,16 +68,32 @@ void morphTriangle(Mat & img1, Mat & img2, Mat & img, std::vector<Point2f> & t1,
     img(r) = img(r) + imgRect;
 }
 
-int main() {
+int main(int argc, char** argv) {
+    
+    if (argc == 1) {
+        cout << "Call this program like this:" << endl;
+        cout << "./MagicMorpher /path/shape_predictor_68_face_landmarks.dat /path/1.jpg /path/2.jpg /path/target.jpg 0.5 1 0" << endl;
+        cout << "The last three parameter means: " << endl;
+        cout << "1. Alpha. The bigger alpha, the morphed picture more like pic1. " << endl;
+        cout << "2. Whether addBoundary(0-no, 1-yes). If not, then the morphed pic will only have face but not the surroundings like hair. " << endl;
+        cout << "3. Whether demoMode(0-no, 1-yes). If yes, then it will demonstrate the landmarks found and trianglation result. " << endl;
+        return 0;
+    }
     
     // parameter decoding
-    string shape_predictor_path = "/Users/cjjlt/programming/C++/MagicMorpher/shape_predictor_68_face_landmarks.dat";
-    string pic1_path = "/Users/cjjlt/programming/C++/MagicMorpher/hillary_clinton.jpg";
-    string pic2_path = "/Users/cjjlt/programming/C++/MagicMorpher/donald_trump.jpg";
-    string target_path = "/Users/cjjlt/programming/C++/MagicMorpher/Morphed Face.jpg";
-    double alpha = 0.5;
-    bool isDemoMode = true;
+    string shape_predictor_path(argv[1]);
+    string pic1_path(argv[2]);
+    string pic2_path(argv[3]);
+    string target_path(argv[4]);
+    double alpha = atof(argv[5]);
     bool addBoundary = false;
+    if (argv[6][0] == '1') {
+        addBoundary = true;
+    }
+    bool isDemoMode = false;
+    if (argv[7][0] == '1') {
+        isDemoMode = true;
+    }
     bool isDebugMode = false;
     
     // read image and get prepared
