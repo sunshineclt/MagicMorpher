@@ -6,8 +6,8 @@ A tool for face morphing
 
 ## 效果展示
 ### 原图（希拉里和特朗普）
-<img src="./pic/clinton.jpg" alt="希拉里" />
-![特朗普](./pic/trump.jpg)
+<img src="./pic/clinton.jpg" alt="希拉里" width=200px/>
+<img src="./pic/trump.jpg" alt="特朗普" width=200px/>
 
 ### 特征检测
 ![特征检测](./pic/特征检测.png)
