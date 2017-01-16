@@ -51,13 +51,33 @@ static void draw_delaunay( Mat& img, Subdiv2D& subdiv, Scalar delaunay_color )
     }
 }
 
+void addBoundary(std::vector<cv::Point2f> & points, Size pic_size) {
+    int x = pic_size.width;
+    int y = pic_size.height;
+    points.push_back(Point2f(0, 0));
+    points.push_back(Point2f(0, y / 2));
+    points.push_back(Point2f(0, y - 1));
+    points.push_back(Point2f(x / 2, 0));
+    points.push_back(Point2f(x / 2, y - 1));
+    points.push_back(Point2f(x - 1, 0));
+    points.push_back(Point2f(x - 1, y / 2));
+    points.push_back(Point2f(x - 1, y - 1));
+}
+
 int main() {
     
     string shape_predictor_path = "/Users/cjjlt/programming/C++/MagicMorpher/shape_predictor_68_face_landmarks.dat";
     string pic1_path = "/Users/cjjlt/programming/C++/MagicMorpher/hillary_clinton.jpg";
+    Mat img1 = imread(pic1_path);
+    Size size1 = img1.size();
+    Rect rect1(0, 0, size1.width, size1.height);
     string pic2_path = "/Users/cjjlt/programming/C++/MagicMorpher/donald_trump.jpg";
+    Mat img2 = imread(pic2_path);
+    Size size2 = img2.size();
+    Rect rect2(0, 0, size2.width, size2.height);
     FaceLandmarkGetter landmarkGetter1(shape_predictor_path, pic1_path);
     std::vector<cv::Point2f> points1 = landmarkGetter1.getFaceLandMark();
+    addBoundary(points1, size1);
     for (unsigned int i = 0; i < points1.size(); ++i) {
         cout << i << "th part: " << points1[i] << endl;
     }
@@ -69,9 +89,7 @@ int main() {
     
     Scalar delaunay_color(255,255,255), points_color(0, 0, 255);
     
-    Mat img1 = imread(pic1_path);
-    Size size1 = img1.size();
-    Rect rect1(0, 0, size1.width, size1.height);
+
     Subdiv2D subdiv1(rect1);
     for (std::vector<cv::Point2f>::iterator iterator = points1.begin(); iterator != points1.end(); ++iterator) {
         subdiv1.insert(*iterator);
