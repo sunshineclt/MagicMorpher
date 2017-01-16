@@ -6,7 +6,7 @@ A tool for face morphing
 
 ## 效果展示
 ### 原图（希拉里和特朗普）
-![希拉里](./pic/cliton.jpg)
+<img src="./pic/clinton.jpg" alt="希拉里" />
 ![特朗普](./pic/trump.jpg)
 
 ### 特征检测
