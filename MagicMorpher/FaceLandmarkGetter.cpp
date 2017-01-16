@@ -28,7 +28,7 @@ std::vector<cv::Point2f> FaceLandmarkGetter::getFaceLandMark() {
     cout << "loading predictor data..." << endl;
     deserialize(predictor_path) >> sp;
     
-    image_window window;
+//    image_window window;
     
     array2d<rgb_pixel> img;
     cout << "loading image..." << endl;
@@ -61,7 +61,7 @@ std::vector<cv::Point2f> FaceLandmarkGetter::getFaceLandMark() {
     
 //    dlib::array<array2d<rgb_pixel> > face_chips;
 //    extract_image_chips(img, get_face_chip_details(shapes), face_chips);
-    //win_faces.set_image(tile_images(face_chips));
+//    win_faces.set_image(tile_images(face_chips));
     
 //    cin.get();
     
