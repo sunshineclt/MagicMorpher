@@ -74,7 +74,7 @@ int main(int argc, char** argv) {
         cout << "Call this program like this:" << endl;
         cout << "./MagicMorpher /path/shape_predictor_68_face_landmarks.dat /path/1.jpg /path/2.jpg /path/target.jpg 0.5 1 0" << endl;
         cout << "The last three parameter means: " << endl;
-        cout << "1. Alpha. The bigger alpha, the morphed picture more like pic1. " << endl;
+        cout << "1. Alpha(between 0 and 1). The bigger alpha, the morphed picture more like pic1. " << endl;
         cout << "2. Whether addBoundary(0-no, 1-yes). If not, then the morphed pic will only have face but not the surroundings like hair. " << endl;
         cout << "3. Whether demoMode(0-no, 1-yes). If yes, then it will demonstrate the landmarks found and trianglation result. " << endl;
         return 0;
