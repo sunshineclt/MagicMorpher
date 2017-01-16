@@ -1,5 +1,6 @@
 # MagicMorpher
 A tool for face morphing
+良好的README阅读体验请移步[https://github.com/sunshineclt/MagicMorpher](https://github.com/sunshineclt/MagicMorpher)
 算法参考[这个网址](http://www.learnopencv.com/face-morph-using-opencv-cpp-python/#download)
 大体来说就是先做面部特征检测，之后根据检测到的特征点做三角剖分，最后将两张图的所有三角分别对应地blend画到目标图片上
 代码注释很详细，可以直接看源代码
@@ -10,16 +11,18 @@ A tool for face morphing
 <img src="./pic/trump.jpg" alt="特朗普" width=200px/>
 
 ### 特征检测
-<img src="./pic/特征检测.jpg" alt="特征检测" width=400px/>
+<img src="./pic/特征检测.png" alt="特征检测" width=400px/>
 
 ### 三角剖分
-<img src="./pic/三角剖分.jpg" alt="三角剖分" width=400px/>
+<img src="./pic/三角剖分.png" alt="三角剖分" width=400px/>
 
 ### Morph结果
 morph结果：
+<br />
 <img src="./pic/morphed_face.png" alt="morph结果" width=400px/>
 
 没有boundary的morph效果（usage中会解释）：
+<br />
 <img src="./pic/no_boundary_morphed_face.png" alt="没有boundary的morph效果" width=400px/>
 
 ## Usage
