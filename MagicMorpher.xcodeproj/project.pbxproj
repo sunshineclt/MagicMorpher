@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E930983A1E2BD708004EE446 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E93098391E2BD708004EE446 /* main.cpp */; };
 		E930984A1E2BDC47004EE446 /* FaceLandmarkGetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E93098481E2BDC47004EE446 /* FaceLandmarkGetter.cpp */; };
+		E96BFDDF1E2C71230032167C /* Trianglationer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E96BFDDD1E2C71230032167C /* Trianglationer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		E93098391E2BD708004EE446 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E93098481E2BDC47004EE446 /* FaceLandmarkGetter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceLandmarkGetter.cpp; sourceTree = "<group>"; };
 		E93098491E2BDC47004EE446 /* FaceLandmarkGetter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FaceLandmarkGetter.hpp; sourceTree = "<group>"; };
+		E96BFDDD1E2C71230032167C /* Trianglationer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Trianglationer.cpp; sourceTree = "<group>"; };
+		E96BFDDE1E2C71230032167C /* Trianglationer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trianglationer.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				E93098391E2BD708004EE446 /* main.cpp */,
+				E96BFDDD1E2C71230032167C /* Trianglationer.cpp */,
+				E96BFDDE1E2C71230032167C /* Trianglationer.hpp */,
 				E93098481E2BDC47004EE446 /* FaceLandmarkGetter.cpp */,
 				E93098491E2BDC47004EE446 /* FaceLandmarkGetter.hpp */,
 			);
@@ -125,6 +130,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96BFDDF1E2C71230032167C /* Trianglationer.cpp in Sources */,
 				E930983A1E2BD708004EE446 /* main.cpp in Sources */,
 				E930984A1E2BDC47004EE446 /* FaceLandmarkGetter.cpp in Sources */,
 			);
@@ -355,6 +361,7 @@
 				E930983F1E2BD708004EE446 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
