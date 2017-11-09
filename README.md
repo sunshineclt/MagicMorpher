@@ -42,7 +42,7 @@ morphing without boundary
 - libjpeg
 - If you want to compile locally, please modify header search paths, framework search paths and library search paths to adjust local opencv, dlib, libjpeg path
 
-### code structure
+### Code structure
 - FaceLandmarkGetter is to subtract face landmarks
 - Trianglationer is to do Delaunay triangulation using face landmarks
 - Finally in main.cpp we accomplish mapping to target image
